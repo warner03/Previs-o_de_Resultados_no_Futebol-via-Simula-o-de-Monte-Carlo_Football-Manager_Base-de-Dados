@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Extensao auditavel: Copa 2026, Monte Carlo, fase de grupos e mata-mata.
+"""Simulação completa do campeonato da Copa 2026: grupos até campeão.
 
 Entradas publicas: parametros agregados, sem redistribuir microdados do jogo.
 Pesos de score, ranks e vantagem dos anfitrioes: algoritmo original.
@@ -23,7 +23,7 @@ from math import exp
 import json
 import numpy as np
 
-BASE = Path(__file__).resolve().parent
+BASE = Path(__file__).resolve().parent.parent
 HOSTS = {'México', 'Estados Unidos', 'Canadá'}
 
 # correspondencias EXPLICITAS; eliminam difflib e a ambiguidade nos nomes

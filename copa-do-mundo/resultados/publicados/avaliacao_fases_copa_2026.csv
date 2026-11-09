@@ -1,0 +1,7 @@
+Fase,K_classificados,Acertos_top_K,Recuperacao_top_K_pct,Brier_binario,Brier_referencia_uniforme
+16avos,32,26,81.25,0.16025,0.222222
+Oitavas,16,12,75.0,0.157573,0.222222
+Quartas,8,5,62.5,0.110007,0.138889
+Semifinal,4,3,75.0,0.061169,0.076389
+Final,2,0,0.0,0.036165,0.039931
+Campeão,1,0,0.0,0.019312,0.020399

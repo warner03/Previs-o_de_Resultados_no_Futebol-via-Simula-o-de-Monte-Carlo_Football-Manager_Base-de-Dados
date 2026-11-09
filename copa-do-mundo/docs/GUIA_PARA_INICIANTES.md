@@ -19,14 +19,13 @@ repositorio/
 ├── README.md                   ← visão geral dos dois trabalhos
 ├── artigo/                     ← artigo e bibliografia compartilhados
 ├── copa-do-mundo/
-│   ├── simulacao_copa_2026.py  ← código Python principal
+│   ├── codigos/                ← notebook isolado, campeonato completo e avaliação
 │   ├── requirements.txt        ← dependência do simulador
 │   ├── .gitignore              ← ignora dados restritos da Copa
 │   ├── dados/                  ← parâmetros agregados
 │   ├── resultados/publicados/  ← simulações já realizadas
 │   ├── resultados/gerados/     ← saídas de novas execuções
 │   ├── tests/                  ← testes de consistência
-│   ├── notebooks/              ← Google Colab
 │   └── docs/                   ← documentação detalhada
 └── brasileirao/
     └── .gitkeep                ← pasta reservada ao colega
@@ -43,7 +42,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
-python simulacao_copa_2026.py --simulacoes 1000 --semente 20261109 --sufixo teste
+python codigos/simulacao_campeonato_completo_copa_2026.py --simulacoes 1000 --semente 20261109 --sufixo teste
 ```
 
 Arquivos novos aparecerao em `resultados/gerados/`. Para reproduzir a tabela principal, troque `1000` por `50000` e `teste` por `reproducao_50mil`.

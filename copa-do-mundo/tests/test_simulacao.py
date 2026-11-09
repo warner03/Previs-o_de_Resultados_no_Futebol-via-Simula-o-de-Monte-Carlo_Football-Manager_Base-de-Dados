@@ -1,6 +1,9 @@
 import unittest
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'codigos'))
 
-from simulacao_copa_2026 import load_model, annex_lookup, poisson_probs, Tournament
+from simulacao_campeonato_completo_copa_2026 import load_model, annex_lookup, poisson_probs, Tournament
 import numpy as np
 
 class TestSimulacaoCopa(unittest.TestCase):
@@ -31,7 +34,7 @@ class TestSimulacaoCopa(unittest.TestCase):
         self.assertAlmostEqual(pa+pb, 1.0, places=12)
 
     def test_simulacao_gera_um_campeao(self):
-        from simulacao_copa_2026 import group_fixtures, load_csv
+        from simulacao_campeonato_completo_copa_2026 import group_fixtures, load_csv
         matches = group_fixtures(self.grupos, load_csv('dados/resultados_copa_2026.csv'))
         sim = Tournament(np.random.default_rng(42), self.grupos, self.rankings,
                          self.scores, self.goleiros, annex_lookup())

@@ -25,3 +25,12 @@ O artigo registra o Brier Score = 0,5427 e 67/104 acertos historicos da planilha
 - Aproximacao no fator casa: a sede exata de cada partida nao e parametrizada.
 - Necessario verificar datas de extracao e direitos de redistribuicao dos dados de Football Manager.
 - O artigo em LaTeX e uma versao editorial preliminar. Adaptar ao template da revista antes da submissao.
+
+
+## Avaliação retrospectiva da classificação
+
+Com as 50.000 simulações completas, calcula-se a probabilidade de cada uma das 48 seleções alcançar cada fase. Para cada etapa, selecionam-se as k seleções mais prováveis, com k = 32, 16, 8, 4, 2 ou 1. A recuperação top-k é a proporção dos classificados reais nesse conjunto; **não** é acurácia de jogos individuais.
+
+O Brier Score binário, calculado com todas as 48 seleções, compara cada probabilidade prevista à ocorrência ou não da classificação. A referência uniforme utiliza a proporção k/48. Os números constam em `resultados/publicados/avaliacao_fases_copa_2026.csv` e são reproduzidos pelo script `codigos/avaliar_previsoes_fases_copa_2026.py`.
+
+A análise é retrospectiva, baseia-se em apenas uma Copa e não comprova calibração nem descarta possível vazamento temporal dos atributos do Football Manager. O Brier binário por fase difere do Brier multiclasse de partidas.

@@ -11,7 +11,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
-python simulacao_copa_2026.py --simulacoes 1000 --semente 20261109 --sufixo teste
+python codigos/simulacao_campeonato_completo_copa_2026.py --simulacoes 1000 --semente 20261109 --sufixo teste
 ```
 
 Use `git status` para conferir arquivos alterados. Na pasta raiz do repositório, `git add .`, `git commit -m "Descreve alterações"` e `git push` publicam mudanças após salvar localmente. Não use `git push --force` sem revisar o histórico.

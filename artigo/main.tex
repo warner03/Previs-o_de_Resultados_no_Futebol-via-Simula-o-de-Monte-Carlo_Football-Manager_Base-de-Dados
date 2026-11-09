@@ -51,7 +51,7 @@
 \thispagestyle{plain}
 
 \begin{abstract}
-	Este trabalho apresenta a extensão de uma pesquisa sobre a modelagem estocástica para a previsão de resultados no futebol, utilizando a Simulação de Monte Carlo acoplada à distribuição de Poisson e alimentada por metadados do simulador \textit{Football Manager 2026}. O \textit{framework} foi avaliado em dois ecossistemas competitivos com estruturas regulamentares e horizontes de variância distintos, englobando um total de 293 partidas: a Copa do Mundo de 2026 (104 partidas em formato de grupos e eliminação simples) e o 1.º Turno da Série A do Campeonato Brasileiro de 2026 (189 partidas em pontos corridos). Desenvolveram-se duas \textit{pipelines} de parametrização adaptativas para a taxa de intensidade de gols esperados ($\lambda$): uma Abordagem de Razão Proporcional baseada em microatributos individuais (\textit{Current Ability} e \textit{Potential Ability}) para o torneio internacional de seleções, e uma Abordagem de Força Híbrida (combinando 50\% de metadados do simulador e 50\% de desempenho real na tabela) com Fator de Fase Gaussiano e correção de Dixon-Coles ($\rho = -0{,}13$) para a liga nacional. Na análise retrospectiva da planilha original da Copa do Mundo, foram registrados 64,4\% de acurácia nominal e \textit{Brier Score} ($BS$) de $0{,}5427$ em 104 placares finais, sujeitos à ressalva de que alguns jogos eliminatórios incluíram prorrogação. Como extensão, 50.000 torneios completos foram simulados, incluindo classificação de grupos, prorrogação e pênaltis, para estimar probabilidades de avanço de fase e de título. Na Série A do Brasileirão, obteve 47,2\% de acurácia nominal e $BS = 0{,}6334$, superando a linha de base de aleatoriedade multiclasse ($BS = 0{,}6667$). Os resultados sugerem a utilidade exploratória do \textit{Football Manager} como fonte secundária de atributos para a modelagem do futebol real e consolidam uma base metodológica estruturada para futuros estudos comparativos envolvendo Redes Neurais Artificiais (RNA) e Regressão Linear Múltipla.
+	Este trabalho apresenta a extensão de uma pesquisa sobre a modelagem estocástica para a previsão de resultados no futebol, utilizando a Simulação de Monte Carlo acoplada à distribuição de Poisson e alimentada por metadados do simulador \textit{Football Manager 2026}. O \textit{framework} foi avaliado em dois ecossistemas competitivos com estruturas regulamentares e horizontes de variância distintos, englobando um total de 293 partidas: a Copa do Mundo de 2026 (104 partidas em formato de grupos e eliminação simples) e o 1.º Turno da Série A do Campeonato Brasileiro de 2026 (189 partidas em pontos corridos). Desenvolveram-se duas \textit{pipelines} de parametrização adaptativas para a taxa de intensidade de gols esperados ($\lambda$): uma Abordagem de Razão Proporcional baseada em microatributos individuais (\textit{Current Ability} e \textit{Potential Ability}) para o torneio internacional de seleções, e uma Abordagem de Força Híbrida (combinando 50\% de metadados do simulador e 50\% de desempenho real na tabela) com Fator de Fase Gaussiano e correção de Dixon-Coles ($\rho = -0{,}13$) para a liga nacional. Na análise retrospectiva da planilha original da Copa do Mundo, foram registrados 64,4\% de acurácia nominal e \textit{Brier Score} ($BS$) de $0{,}5427$ em 104 placares finais, sujeitos à ressalva de que alguns jogos eliminatórios incluíram prorrogação. Como extensão, 50.000 torneios completos foram simulados, incluindo classificação de grupos, prorrogação e pênaltis, para estimar probabilidades de avanço de fase e de título. Na Série A do Brasileirão, obteve 47,2\% de acurácia nominal e $BS = 0{,}6334$, superando a linha de base de aleatoriedade multiclasse ($BS = 0{,}6667$). Os resultados sugerem a utilidade exploratória do \textit{Football Manager} como fonte secundária de atributos para a modelagem do futebol real e consolidam uma base metodológica estruturada para estudos futuros comparativos entre Monte Carlo e Redes Neurais Artificiais (RNA).
 \end{abstract}
      
 
@@ -293,6 +293,35 @@ Com a extensão para 50.000 campeonatos completos, foram estimadas as probabilid
 \end{figure}
 
 A França apresentou a maior probabilidade de título (7,45\%), seguida por Inglaterra (7,13\%) e Brasil (5,91\%). Apesar das diferenças na força estimada dos elencos, as probabilidades de título permaneceram distribuídas por várias equipes, refletindo a composição da incerteza ao longo de sete partidas possíveis em um torneio com 48 seleções. Entre os 1.600.000 confrontos eliminatórios amostrados nas 50.000 réplicas, 24,89\% demandaram prorrogação e 12,10\% chegaram à disputa de pênaltis. São frequências geradas pelo modelo, não taxas medidas nos jogos realizados.
+
+
+\paragraph{Avaliação retrospectiva das probabilidades de classificação}
+Para verificar a correspondência das probabilidades simuladas com a trajetória observada, as estimativas dos 50.000 torneios completos foram comparadas com as seleções presentes em cada fase no registro das 104 partidas. Para cada fase $F$, com $k_F$ vagas ($32$, $16$, $8$, $4$, $2$ ou $1$), selecionaram-se as $k_F$ equipes de maior probabilidade simulada. Denominou-se \textit{recuperação top-$k_F$} a fração das equipes efetivamente classificadas que aparecem nessa seleção; tal medida não representa a acurácia de palpites de partidas individuais.
+
+Calculou-se também o \textit{Brier Score} binário por fase, considerando todas as 48 seleções: $BS_F=(1/48)\sum_{i=1}^{48}(\widehat p_{i,F}-y_{i,F})^2$, em que $\widehat p_{i,F}$ é a probabilidade de a seleção $i$ alcançar a fase $F$ e $y_{i,F}$ é o indicador observado (um para classificada e zero caso contrário). Como referência descritiva, atribuiu-se a cada seleção a probabilidade uniforme $k_F/48$, com $BS_{\mathrm{ref}}=(k_F/48)(1-k_F/48)$. Essa referência considera o número de vagas, mas ignora diferenças técnicas entre equipes.
+
+\begin{table}[ht]
+\centering
+\caption{Avaliação retrospectiva do avanço por fase: recuperação top-$k_F$ e Brier Score binário.}
+\label{tab:copa2026_avaliacao_fases}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Fase alcançada} & \textbf{Acertos top-$k_F$} & \textbf{Recuperação (\%)} & \textbf{$BS_F$} & \textbf{Ref. uniforme}\\
+\hline
+16-avos & 26/32 & 81,25 & 0,1603 & 0,2222\\
+Oitavas & 12/16 & 75,00 & 0,1576 & 0,2222\\
+Quartas & 5/8 & 62,50 & 0,1100 & 0,1389\\
+Semifinais & 3/4 & 75,00 & 0,0612 & 0,0764\\
+Final & 0/2 & 0,00 & 0,0362 & 0,0399\\
+Título & 0/1 & 0,00 & 0,0193 & 0,0204\\
+\hline
+\end{tabular}}
+\end{table}
+
+A Tabela~\ref{tab:copa2026_avaliacao_fases} mostra que o modelo identificou 26 das 32 classificadas aos 16-avos, 12 das 16 oitavistas e três das quatro semifinalistas entre as respectivas equipes de maior probabilidade. Contudo, nenhuma das duas finalistas observadas (Espanha e Argentina) integrou o grupo das duas maiores probabilidades simuladas de chegar à final, e a campeã Espanha não liderava as chances de título. À Espanha foram atribuídos $10,124\%$ de chance de alcançar a final e $5,686\%$ de conquistar o campeonato.
+
+Os valores de Brier binário foram inferiores aos da referência uniforme em todas as etapas, mas essa observação não estabelece calibração comprovada: avalia-se apenas um torneio e a anterioridade dos atributos de entrada ainda depende de auditoria temporal. Além disso, as proporções de classificação variam muito entre fases e afetam a magnitude do Brier. Este Brier binário por fase é distinto do Brier multiclasse de $0,5427$ calculado para resultados de jogos. A recuperação top-$k_F$ torna-se estatisticamente mais instável nas últimas etapas, com apenas duas vagas na final e uma para o título.
 
 Em cenários de sensibilidade, foram avaliados tanto o desempate direto por pênaltis após os 90 minutos quanto a inclusão de um sexto meio-campista, como no código inicial. Os resultados completos dessas execuções são disponibilizados nos arquivos suplementares. Os efeitos devem ser analisados separadamente da variação decorrente da amostragem aleatória e da ausência de calibração empírica dos pesos e das probabilidades de pênaltis.
 

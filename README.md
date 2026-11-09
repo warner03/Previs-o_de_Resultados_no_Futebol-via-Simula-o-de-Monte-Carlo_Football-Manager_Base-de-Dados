@@ -7,7 +7,7 @@ Repositório acadêmico conjunto com duas frentes de pesquisa: **Copa do Mundo d
 | Pasta ou arquivo | Conteúdo |
 |---|---|
 | [`artigo/`](artigo/) | Artigo conjunto em LaTeX, bibliografia, figuras e versão PDF |
-| [`copa-do-mundo/`](copa-do-mundo/) | Código Python, dados agregados, 50 mil simulações completas da Copa, resultados, testes e notebook Colab |
+| [`copa-do-mundo/`](copa-do-mundo/) | Pasta codigos/ com notebook de partidas, simulador completo e avaliador de fases; dados, resultados e testes |
 | [`brasileirao/`](brasileirao/) | Pasta reservada ao segundo pesquisador; nenhum código ou dado foi adicionado |
 | `README.md` | Esta apresentação geral |
 
@@ -16,8 +16,8 @@ Repositório acadêmico conjunto com duas frentes de pesquisa: **Copa do Mundo d
 A simulação aplica **Poisson e Monte Carlo** a 48 seleções. Foram executados **50.000 torneios completos**, passando por fase de grupos, melhores terceiros colocados, mata-mata, prorrogação e pênaltis. **Não** significa 50 mil repetições independentes de cada confronto específico do mata-mata.
 
 - [Explicação passo a passo do projeto](copa-do-mundo/docs/GUIA_PARA_INICIANTES.md)
-- [Algoritmo principal](copa-do-mundo/simulacao_copa_2026.py)
-- [Notebook para Google Colab](copa-do-mundo/notebooks/Executar_no_Colab.ipynb)
+- [Algoritmo principal](copa-do-mundo/codigos/simulacao_campeonato_completo_copa_2026.py)
+- [Notebook para Google Colab](copa-do-mundo/codigos/simulacao_partidas_isoladas_copa_2026.ipynb)
 - [Resultados das simulações](copa-do-mundo/resultados/publicados/)
 - [Metodologia e limitações](copa-do-mundo/docs/METODOLOGIA_E_LIMITACOES.md)
 
@@ -34,3 +34,7 @@ A pasta `brasileirao/` contém somente um `.gitkeep`, arquivo técnico para o Gi
 Os resultados da Copa distinguem a avaliação histórica (67 acertos em 104 partidas) do recálculo e do experimento de torneios completos. Consulte os limites metodológicos antes de apresentar métricas como previsões estritas dos 90 minutos.
 
 **Autoria, licença e dados:** os direitos e a licença de distribuição devem ser acordados pelos autores. O repositório não atribui uma licença open source automaticamente.
+
+## Avaliação adicional
+
+O script [`avaliar_previsoes_fases_copa_2026.py`](copa-do-mundo/codigos/avaliar_previsoes_fases_copa_2026.py) compara as probabilidades das 50.000 Copas completas com as fases efetivamente alcançadas pelas seleções: recuperação top-k e Brier binário por fase. Essa avaliação **não** se confunde com a acurácia dos resultados dos 104 jogos. Os detalhes constam no artigo atualizado.

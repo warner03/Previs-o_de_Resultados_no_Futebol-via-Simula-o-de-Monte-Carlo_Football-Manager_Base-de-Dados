@@ -20,3 +20,10 @@ A seção 4.2 foi atualizada com base no TCC fornecido pelo autor: comparação 
 Ao final da metodologia, foi incluída uma referência clicável ao repositório do projeto, com uma entrada bibliográfica em `referencias_novas.bib`. Essa referência descreve os materiais efetivamente disponibilizados, sem afirmar que as bases brutas nem os códigos do Brasileirão já estejam públicos.
 
 **Fonte atualizada:** os arquivos `main.tex` e `.bib` refletem esta revisão. O PDF armazenado neste repositório ainda corresponde à compilação anterior; gere a versão atual no Overleaf com os arquivos-fonte ou utilize o PDF atualizado fornecido à parte.
+
+
+## Avaliação de fases do torneio completo
+
+A seção 3.1 inclui nova tabela comparando as probabilidades de avanço com a classificação observada: recuperação top-k e Brier binário por fase. Veja `../copa-do-mundo/codigos/avaliar_previsoes_fases_copa_2026.py` e `../copa-do-mundo/resultados/publicados/avaliacao_fases_copa_2026.csv`.
+
+A versão fonte `main.tex` contém os dados mais recentes; compile no Overleaf para gerar o PDF atualizado. O PDF previamente incluído na pasta pode corresponder a uma versão anterior.
