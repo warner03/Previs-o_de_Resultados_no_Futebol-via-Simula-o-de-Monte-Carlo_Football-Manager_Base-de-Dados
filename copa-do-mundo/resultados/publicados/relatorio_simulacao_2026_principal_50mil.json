@@ -1,0 +1,258 @@
+{
+  "proveniencia": "As previsoes por jogo nao condicionam em resultados reais; partida real somente para validacao retrospectiva.",
+  "n_simulacoes": 50000,
+  "semente": 20261109,
+  "n_meio_campistas": 5,
+  "usa_prorrogacao": true,
+  "formula_penaltis": "P(A)=0.20*0.50+0.80*(0.5*Score_A/(Score_A+Score_B)+0.5*GK_A/(GK_A+GK_B))",
+  "p_penaltis_estimado_apos_120_min_por_confronto": 0.120995625,
+  "n_jogos_mata_mata_total": 1600000,
+  "n_prorrogacoes": 398163,
+  "n_disputas_penaltis": 193593,
+  "penaltis_por_fase": {
+    "R32": 96206,
+    "QF": 24522,
+    "SF": 12389,
+    "R16": 48368,
+    "Final": 6117,
+    "3o lugar": 5991
+  },
+  "validacao_recalculada": {
+    "n_partidas": 104,
+    "acertos": 70,
+    "acuracia": 0.6730769230769231,
+    "brier": 0.5426360418539503,
+    "por_fase": {
+      "Grupos": {
+        "partidas": 72,
+        "acertos": 46,
+        "brier": 0.5487523715965623
+      },
+      "16avos": {
+        "partidas": 16,
+        "acertos": 13,
+        "brier": 0.4990253086349041
+      },
+      "Oitavas": {
+        "partidas": 8,
+        "acertos": 6,
+        "brier": 0.5671912791025763
+      },
+      "Quartas": {
+        "partidas": 4,
+        "acertos": 4,
+        "brier": 0.47085955638995114
+      },
+      "Semifinal": {
+        "partidas": 2,
+        "acertos": 0,
+        "brier": 0.6535775861474165
+      },
+      "Terceiro_Lugar": {
+        "partidas": 1,
+        "acertos": 0,
+        "brier": 0.6118705302459999
+      },
+      "Final": {
+        "partidas": 1,
+        "acertos": 1,
+        "brier": 0.5995784987786401
+      }
+    }
+  },
+  "somas_de_probabilidades_por_etapa_pct": {
+    "P_16avos_pct": 3200.0,
+    "P_oitavas_pct": 1600.0,
+    "P_quartas_pct": 800.0,
+    "P_semifinal_pct": 400.0,
+    "P_final_pct": 200.0,
+    "P_campeao_pct": 100.0,
+    "P_3o_lugar_pct": 100.0
+  },
+  "principais_equipas": [
+    {
+      "Selecao": "França",
+      "Score": 87.137,
+      "Goleiro": 81.0,
+      "P_16avos_pct": 87.358,
+      "P_oitavas_pct": 56.186,
+      "P_quartas_pct": 35.09,
+      "P_semifinal_pct": 21.592,
+      "P_final_pct": 12.686,
+      "P_campeao_pct": 7.448,
+      "P_3o_lugar_pct": 5.414,
+      "P_1o_grupo_pct": 46.104,
+      "P_2o_grupo_pct": 28.082,
+      "P_3o_grupo_classificado_pct": 13.172
+    },
+    {
+      "Selecao": "Inglaterra",
+      "Score": 86.265,
+      "Goleiro": 78.0,
+      "P_16avos_pct": 86.198,
+      "P_oitavas_pct": 55.1,
+      "P_quartas_pct": 34.198,
+      "P_semifinal_pct": 20.498,
+      "P_final_pct": 12.244,
+      "P_campeao_pct": 7.134,
+      "P_3o_lugar_pct": 4.972,
+      "P_1o_grupo_pct": 44.614,
+      "P_2o_grupo_pct": 28.19,
+      "P_3o_grupo_classificado_pct": 13.394
+    },
+    {
+      "Selecao": "Brasil",
+      "Score": 84.213,
+      "Goleiro": 89.0,
+      "P_16avos_pct": 86.978,
+      "P_oitavas_pct": 51.236,
+      "P_quartas_pct": 30.912,
+      "P_semifinal_pct": 18.148,
+      "P_final_pct": 10.408,
+      "P_campeao_pct": 5.908,
+      "P_3o_lugar_pct": 4.61,
+      "P_1o_grupo_pct": 44.4,
+      "P_2o_grupo_pct": 28.622,
+      "P_3o_grupo_classificado_pct": 13.956
+    },
+    {
+      "Selecao": "Argentina",
+      "Score": 82.882,
+      "Goleiro": 79.0,
+      "P_16avos_pct": 87.938,
+      "P_oitavas_pct": 52.124,
+      "P_quartas_pct": 31.35,
+      "P_semifinal_pct": 18.16,
+      "P_final_pct": 10.18,
+      "P_campeao_pct": 5.726,
+      "P_3o_lugar_pct": 4.606,
+      "P_1o_grupo_pct": 44.054,
+      "P_2o_grupo_pct": 29.326,
+      "P_3o_grupo_classificado_pct": 14.558
+    },
+    {
+      "Selecao": "Espanha",
+      "Score": 82.911,
+      "Goleiro": 80.0,
+      "P_16avos_pct": 87.222,
+      "P_oitavas_pct": 51.154,
+      "P_quartas_pct": 30.002,
+      "P_semifinal_pct": 17.758,
+      "P_final_pct": 10.124,
+      "P_campeao_pct": 5.686,
+      "P_3o_lugar_pct": 4.33,
+      "P_1o_grupo_pct": 44.834,
+      "P_2o_grupo_pct": 29.224,
+      "P_3o_grupo_classificado_pct": 13.164
+    },
+    {
+      "Selecao": "Portugal",
+      "Score": 82.67,
+      "Goleiro": 80.0,
+      "P_16avos_pct": 86.278,
+      "P_oitavas_pct": 51.038,
+      "P_quartas_pct": 30.576,
+      "P_semifinal_pct": 17.748,
+      "P_final_pct": 10.03,
+      "P_campeao_pct": 5.558,
+      "P_3o_lugar_pct": 4.44,
+      "P_1o_grupo_pct": 44.818,
+      "P_2o_grupo_pct": 28.306,
+      "P_3o_grupo_classificado_pct": 13.154
+    },
+    {
+      "Selecao": "Bélgica",
+      "Score": 81.172,
+      "Goleiro": 91.0,
+      "P_16avos_pct": 88.71,
+      "P_oitavas_pct": 54.474,
+      "P_quartas_pct": 31.5,
+      "P_semifinal_pct": 17.43,
+      "P_final_pct": 9.518,
+      "P_campeao_pct": 5.044,
+      "P_3o_lugar_pct": 4.574,
+      "P_1o_grupo_pct": 48.484,
+      "P_2o_grupo_pct": 27.418,
+      "P_3o_grupo_classificado_pct": 12.808
+    },
+    {
+      "Selecao": "Estados Unidos",
+      "Score": 75.649,
+      "Goleiro": 64.0,
+      "P_16avos_pct": 82.272,
+      "P_oitavas_pct": 50.138,
+      "P_quartas_pct": 28.442,
+      "P_semifinal_pct": 15.702,
+      "P_final_pct": 8.604,
+      "P_campeao_pct": 4.536,
+      "P_3o_lugar_pct": 3.948,
+      "P_1o_grupo_pct": 40.362,
+      "P_2o_grupo_pct": 27.596,
+      "P_3o_grupo_classificado_pct": 14.314
+    },
+    {
+      "Selecao": "Alemanha",
+      "Score": 81.187,
+      "Goleiro": 75.0,
+      "P_16avos_pct": 86.52,
+      "P_oitavas_pct": 50.754,
+      "P_quartas_pct": 27.758,
+      "P_semifinal_pct": 15.55,
+      "P_final_pct": 8.446,
+      "P_campeao_pct": 4.524,
+      "P_3o_lugar_pct": 3.994,
+      "P_1o_grupo_pct": 45.312,
+      "P_2o_grupo_pct": 27.778,
+      "P_3o_grupo_classificado_pct": 13.43
+    },
+    {
+      "Selecao": "Países Baixos",
+      "Score": 81.251,
+      "Goleiro": 73.0,
+      "P_16avos_pct": 79.016,
+      "P_oitavas_pct": 44.214,
+      "P_quartas_pct": 26.262,
+      "P_semifinal_pct": 14.69,
+      "P_final_pct": 7.984,
+      "P_campeao_pct": 4.236,
+      "P_3o_lugar_pct": 3.822,
+      "P_1o_grupo_pct": 36.268,
+      "P_2o_grupo_pct": 27.226,
+      "P_3o_grupo_classificado_pct": 15.522
+    },
+    {
+      "Selecao": "México",
+      "Score": 72.615,
+      "Goleiro": 66.0,
+      "P_16avos_pct": 80.662,
+      "P_oitavas_pct": 47.138,
+      "P_quartas_pct": 24.822,
+      "P_semifinal_pct": 12.614,
+      "P_final_pct": 6.488,
+      "P_campeao_pct": 3.37,
+      "P_3o_lugar_pct": 3.148,
+      "P_1o_grupo_pct": 38.45,
+      "P_2o_grupo_pct": 27.382,
+      "P_3o_grupo_classificado_pct": 14.83
+    },
+    {
+      "Selecao": "Croácia",
+      "Score": 76.176,
+      "Goleiro": 68.0,
+      "P_16avos_pct": 75.762,
+      "P_oitavas_pct": 42.014,
+      "P_quartas_pct": 22.608,
+      "P_semifinal_pct": 11.734,
+      "P_final_pct": 5.978,
+      "P_campeao_pct": 2.978,
+      "P_3o_lugar_pct": 2.838,
+      "P_1o_grupo_pct": 28.688,
+      "P_2o_grupo_pct": 30.032,
+      "P_3o_grupo_classificado_pct": 17.042
+    }
+  ],
+  "limites": "Desempates disciplinares (fair play) nao disponiveis; como fallback, ranking original de FIFA do algoritmo. Parametros heurísticos nao recalibrados. Modelo simplifica capacidade fixa e fator casa sem sede de jogo. Prorrogacao modeled with lambda/3 independent Poisson. Uso de resultados reais para validacao inclui placares que podem envolver prorrogacao, verificar.",
+  "fontes_regulamento": [
+    "https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf"
+  ]
+}

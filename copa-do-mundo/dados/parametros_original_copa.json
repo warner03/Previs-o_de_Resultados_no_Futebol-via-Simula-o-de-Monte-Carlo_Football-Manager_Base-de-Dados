@@ -1,0 +1,127 @@
+{
+  "grupos": {
+    "A": [
+      "México",
+      "África do Sul",
+      "Coreia do Sul",
+      "República Tcheca"
+    ],
+    "B": [
+      "Canadá",
+      "Bósnia",
+      "Catar",
+      "Suíça"
+    ],
+    "C": [
+      "Brasil",
+      "Marrocos",
+      "Haiti",
+      "Escócia"
+    ],
+    "D": [
+      "Estados Unidos",
+      "Paraguai",
+      "Austrália",
+      "Turquia"
+    ],
+    "E": [
+      "Alemanha",
+      "Curaçao",
+      "Costa do Marfim",
+      "Equador"
+    ],
+    "F": [
+      "Países Baixos",
+      "Japão",
+      "Suécia",
+      "Tunísia"
+    ],
+    "G": [
+      "Bélgica",
+      "Egito",
+      "Irã",
+      "Nova Zelândia"
+    ],
+    "H": [
+      "Espanha",
+      "Cabo Verde",
+      "Arábia Saudita",
+      "Uruguai"
+    ],
+    "I": [
+      "França",
+      "Senegal",
+      "Iraque",
+      "Noruega"
+    ],
+    "J": [
+      "Argentina",
+      "Argélia",
+      "Áustria",
+      "Jordânia"
+    ],
+    "K": [
+      "Portugal",
+      "RD Congo",
+      "Uzbequistão",
+      "Colômbia"
+    ],
+    "L": [
+      "Inglaterra",
+      "Croácia",
+      "Gana",
+      "Panamá"
+    ]
+  },
+  "rankings": {
+    "Argentina": 1,
+    "França": 2,
+    "Bélgica": 3,
+    "Inglaterra": 4,
+    "Brasil": 5,
+    "Países Baixos": 6,
+    "Portugal": 7,
+    "Espanha": 8,
+    "Itália": 9,
+    "Croácia": 10,
+    "Uruguai": 11,
+    "Estados Unidos": 12,
+    "Marrocos": 13,
+    "Colômbia": 14,
+    "México": 15,
+    "Alemanha": 16,
+    "Senegal": 17,
+    "Japão": 18,
+    "Suíça": 19,
+    "Irã": 20,
+    "Canadá": 40,
+    "Coreia do Sul": 22,
+    "Austrália": 23,
+    "Áustria": 25,
+    "Suécia": 26,
+    "Tunísia": 28,
+    "Argélia": 30,
+    "Egito": 36,
+    "Escócia": 39,
+    "Turquia": 40,
+    "República Tcheca": 41,
+    "Catar": 58,
+    "RD Congo": 67,
+    "Costa do Marfim": 49,
+    "Haiti": 89,
+    "África do Sul": 59,
+    "Bósnia": 71,
+    "Nova Zelândia": 104,
+    "Uzbequistão": 68,
+    "Iraque": 63,
+    "Cabo Verde": 73,
+    "Paraguai": 53,
+    "Curaçao": 90,
+    "Arábia Saudita": 56,
+    "Jordânia": 87,
+    "Gana": 61,
+    "Panamá": 44,
+    "Noruega": 44
+  },
+  "nota": "Rankings e ponderacoes provenientes do script original, sem atualizacao externa."
+}

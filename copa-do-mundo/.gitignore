@@ -1,0 +1,28 @@
+# Segredos e ambientes
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Bases brutas de terceiros: nao subir sem permissao
+/dados_restritos/
+/jogadores_copa_2026_FINAL_COMPLETA_V4*.xlsx
+/Treinadores_Copa*.xlsx
+
+# Arquivos gerados por novas execucoes
+/resultados/gerados/*
+!/resultados/gerados/.gitkeep
+
+# Compilacao LaTeX/Overleaf
+/artigo/*.aux
+/artigo/*.bbl
+/artigo/*.blg
+/artigo/*.fdb_latexmk
+/artigo/*.fls
+/artigo/*.log
+/artigo/*.out
+/artigo/*.synctex.gz
+/artigo/*.toc
