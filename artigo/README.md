@@ -12,3 +12,11 @@ Arquivos necessarios para compilar o PDF:
 No Overleaf, use `New Project` > `Upload Project` e envie o ZIP especifico do Overleaf, disponibilizado junto ao pacote. Em um projeto novo, escolha `main.tex` como arquivo principal e `pdfLaTeX` como compilador. O arquivo PDF nesta pasta e uma pre-visualizacao, nao o codigo fonte.
 
 O comando de bibliografia do documento e `\bibliography{biblioteca,referencias_novas}`. Os nomes dos arquivos `.bib` precisam ser exatamente esses.
+
+## Revisão TCC e GitHub (9 nov. 2026)
+
+A seção 4.2 foi atualizada com base no TCC fornecido pelo autor: comparação Monte Carlo/Poisson versus RNA MLP, Elo Rating, forma recente, recorte histórico de 2006, avaliação temporal 90/10 e técnicas de regularização. A regressão linear e as 20 variáveis, que não correspondem ao desenho do TCC enviado, foram retiradas dessa seção.
+
+Ao final da metodologia, foi incluída uma referência clicável ao repositório do projeto, com uma entrada bibliográfica em `referencias_novas.bib`. Essa referência descreve os materiais efetivamente disponibilizados, sem afirmar que as bases brutas nem os códigos do Brasileirão já estejam públicos.
+
+**Fonte atualizada:** os arquivos `main.tex` e `.bib` refletem esta revisão. O PDF armazenado neste repositório ainda corresponde à compilação anterior; gere a versão atual no Overleaf com os arquivos-fonte ou utilize o PDF atualizado fornecido à parte.
