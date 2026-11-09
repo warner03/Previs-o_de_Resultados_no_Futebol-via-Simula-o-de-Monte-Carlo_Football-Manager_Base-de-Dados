@@ -1,0 +1,8 @@
+pandas
+numpy
+scipy
+requests
+openpyxl
+xlsxwriter
+selenium
+google-api-python-client
